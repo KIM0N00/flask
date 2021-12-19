@@ -146,7 +146,7 @@ def update_order(id):
         return "Заказ не может быть изменен", 400
 
 
-@app.route('/orders/<id>/change-status', methods=['POST'])
+@app.route('/orders/<id>/change-status', methods=['PUT'])
 def change_order_status(id):
     json = request.get_json()
     new_status = json.get('status')
